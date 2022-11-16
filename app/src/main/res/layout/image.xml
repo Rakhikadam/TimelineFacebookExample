@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+        android:id="@+id/profileimage"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_profile"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:weightSum="4"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="Rakhi Kadam"
+                android:layout_weight="2"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="Favorities"
+                android:layout_weight="2"
+                android:textSize="15dp"></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_dot"
+            ></ImageView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spend to some time with this eveining"
+        android:textSize="20dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="10dp"></TextView>
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image"
+        ></ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_like"></ImageView>
+        <ImageView
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fav"></ImageView>
+        <TextView
+            android:id="@+id/test2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sam and 42 ohers"
+            android:paddingRight="20dp"
+            android:paddingLeft="10dp"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/test5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7comments"
+            android:paddingLeft="10dp"
+            android:textSize="20dp"></TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="3"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_like"></ImageView>
+        <TextView
+            android:id="@+id/Image1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Like"
+            android:layout_weight="1"
+            android:textSize="30dp"></TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            >
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_comment"></ImageView>
+        <TextView
+            android:id="@+id/Image2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Comments"
+            android:layout_weight="1"
+            android:textSize="30dp"></TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <ImageView
+            android:id="@+id/image3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_share"></ImageView>
+        <TextView
+            android:id="@+id/Image3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Share"
+            android:layout_weight="1"
+            android:textSize="30dp"></TextView>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
