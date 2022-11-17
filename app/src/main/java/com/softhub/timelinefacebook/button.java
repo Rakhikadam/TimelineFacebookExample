@@ -2,7 +2,9 @@ package com.softhub.timelinefacebook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,13 +22,12 @@ public class button extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.timeline_profile);
+        Intent data =getIntent();
+        ArrayList<comment> coom = data.getParcelableArrayListExtra("comments");
         ListView listViewt = findViewById(R.id.list1);
-        List<comment>list= new ArrayList<>();
-        comment comm = new comment(getResources().getDrawable(R.drawable.comprofile),"AAAAAAAAA","nice pic");
-        list.add(comm);
-        comment comm1 = new comment(getResources().getDrawable(R.drawable.gabbar),"DDDDDDDD","beautiful photo");
-        list.add(comm1);
-        CommentAdpter adpter = new CommentAdpter(list);
+
+
+        CommentAdpter adpter = new CommentAdpter(coom);
         listViewt.setAdapter(adpter);
 
     }

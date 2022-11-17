@@ -1,8 +1,10 @@
 package com.softhub.timelinefacebook;
 
 import android.graphics.drawable.Drawable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class comment {
+public class comment implements Parcelable {
     Drawable profile;
     String name;
     String comments;
@@ -12,6 +14,23 @@ public class comment {
         this.name = name;
         this.comments = comments;
     }
+
+    protected comment(Parcel in) {
+        name = in.readString();
+        comments = in.readString();
+    }
+
+    public static final Creator<comment> CREATOR = new Creator<comment>() {
+        @Override
+        public comment createFromParcel(Parcel in) {
+            return new comment(in);
+        }
+
+        @Override
+        public comment[] newArray(int size) {
+            return new comment[size];
+        }
+    };
 
     public Drawable getProfile() {
         return profile;
@@ -35,5 +54,16 @@ public class comment {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(comments);
     }
 }
