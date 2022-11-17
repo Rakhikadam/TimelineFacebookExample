@@ -5,17 +5,18 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class comment implements Parcelable {
-    Drawable profile;
+    String profile;
     String name;
     String comments;
 
-    public comment(Drawable profile, String name, String comments) {
+    public comment(String profile, String name, String comments) {
         this.profile = profile;
         this.name = name;
         this.comments = comments;
     }
 
     protected comment(Parcel in) {
+        profile = in.readString();
         name = in.readString();
         comments = in.readString();
     }
@@ -32,11 +33,11 @@ public class comment implements Parcelable {
         }
     };
 
-    public Drawable getProfile() {
+    public String getProfile() {
         return profile;
     }
 
-    public void setProfile(Drawable profile) {
+    public void setProfile(String profile) {
         this.profile = profile;
     }
 
@@ -63,6 +64,7 @@ public class comment implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(profile);
         dest.writeString(name);
         dest.writeString(comments);
     }

@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class user implements Parcelable {
-Drawable profile;
+String profile;
 String name;
 String status;
-Drawable image;
+String image;
 String like_count;
 String comments_count;
 ArrayList<comment> comments;
 
-    public user(Drawable profile, String name, String status, Drawable image, String like_count, String comments_count, ArrayList<comment> comments) {
+    public user(String profile, String name, String status, String image, String like_count, String comments_count, ArrayList<comment> comments) {
         this.profile = profile;
         this.name = name;
         this.status = status;
@@ -26,38 +26,11 @@ ArrayList<comment> comments;
         this.comments = comments;
     }
 
-    protected user(Parcel in) {
-        name = in.readString();
-        status = in.readString();
-        like_count = in.readString();
-        comments_count = in.readString();
-    }
-
-    public ArrayList<comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(ArrayList<comment> comments) {
-        this.comments = comments;
-    }
-
-    public static final Creator<user> CREATOR = new Creator<user>() {
-        @Override
-        public user createFromParcel(Parcel in) {
-            return new user(in);
-        }
-
-        @Override
-        public user[] newArray(int size) {
-            return new user[size];
-        }
-    };
-
-    public Drawable getProfile() {
+    public String getProfile() {
         return profile;
     }
 
-    public void setProfile(Drawable profile) {
+    public void setProfile(String profile) {
         this.profile = profile;
     }
 
@@ -77,11 +50,11 @@ ArrayList<comment> comments;
         this.status = status;
     }
 
-    public Drawable getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -101,6 +74,14 @@ ArrayList<comment> comments;
         this.comments_count = comments_count;
     }
 
+    public ArrayList<comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(ArrayList<comment> comments) {
+        this.comments = comments;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -108,10 +89,6 @@ ArrayList<comment> comments;
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeString(status);
-        dest.writeString(like_count);
-        dest.writeString(comments_count);
 
     }
 }

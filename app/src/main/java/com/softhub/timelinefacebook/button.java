@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +59,7 @@ public class button extends AppCompatActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View XYZ = LayoutInflater.from(button.this).inflate(R.layout.comment,parent,false);
             ImageView imageView = XYZ.findViewById(R.id.profile);
-            imageView.setImageDrawable(list.get(position).getProfile());
+            Glide.with(button.this).load(list.get(position).getProfile()).into(imageView);
             TextView textView= XYZ.findViewById(R.id.name1);
             textView.setText(list.get(position).getName());
             TextView textView1 = XYZ.findViewById(R.id.comme);
