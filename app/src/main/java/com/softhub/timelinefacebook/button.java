@@ -25,6 +25,7 @@ public class button extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.timeline_profile);
         Intent data =getIntent();
+
         ArrayList<comment> coom = data.getParcelableArrayListExtra("comments");
         ListView listViewt = findViewById(R.id.list1);
 

@@ -27,8 +27,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ListView listView = findViewById(R.id.list);
         List<user>list = new ArrayList<>();
-        ArrayList<comment> commentUser1= new ArrayList<>();
+        ImageView imageView = findViewById(R.id.video);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,videoList.class);
+                ArrayList<videoList>list1 = new ArrayList<>();
 
+                startActivity(intent);
+            }
+        });
+
+        ArrayList<comment> commentUser1= new ArrayList<>();
         commentUser1.add(new comment("https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg","roshan"," nice.."));
         commentUser1.add(new comment("https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg","pankaj","very nice.."));
         commentUser1.add(new comment("https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg","rakhi","very good.."));
@@ -83,14 +93,14 @@ public class MainActivity extends AppCompatActivity {
             Glide.with(MainActivity.this).load(list.get(position).getImage()).into(imageView3);
 
 
-
-
             TextView textView = ABC.findViewById(R.id.name);
             textView.setText(list.get(position).getName());
             TextView textView1 = ABC.findViewById(R.id.status);
             textView1.setText(list.get(position).getStatus());
             TextView textView2 = ABC.findViewById(R.id.test2);
             textView2.setText(list.get(position).getLike_count());
+
+
             TextView textView3 = ABC.findViewById(R.id.test5);
             textView3.setText(list.get(position).getComments_count());
             textView3.setOnClickListener(new View.OnClickListener() {
