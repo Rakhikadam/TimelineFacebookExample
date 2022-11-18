@@ -38,6 +38,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageView listView2 = findViewById(R.id.personlist);
+        listView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,personList.class);
+                List<personList>list3 = new ArrayList<>();
+                startActivity(intent);
+            }
+        });
+
+        ImageView imageView1 = findViewById(R.id.notification);
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Notification.class);
+                List<Notification>list4 = new ArrayList<>();
+                startActivity(intent);
+            }
+        });
+
+
         ArrayList<comment> commentUser1= new ArrayList<>();
         commentUser1.add(new comment("https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg","roshan"," nice.."));
         commentUser1.add(new comment("https://static.vecteezy.com/system/resources/thumbnails/005/544/770/small/profile-icon-design-free-vector.jpg","pankaj","very nice.."));

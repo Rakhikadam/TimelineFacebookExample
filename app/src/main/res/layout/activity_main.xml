@@ -104,7 +104,7 @@
             android:src="@drawable/ic_video"></ImageView>
 
         <ImageView
-            android:id="@+id/person"
+            android:id="@+id/personlist"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_people_all"></ImageView>
@@ -117,7 +117,7 @@
 
         <ImageView
             android:id="@+id/line"
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_line"></ImageView>
 
